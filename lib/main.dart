@@ -156,7 +156,7 @@ class AboutPage extends StatelessWidget {
   <ul>
     <li><a href='http://gordonferguson.org'>gordonferguson.org</a></li>
     <li><a href="https://ipibooks.ecwid.com/#!/Gordon-Ferguson/c/18671194/offset=0&sort=nameAsc">Books, videos (ipi)</a></li>
-    <li><a href="mailto://gordonferguson33@gmail.com">Contact</a></li>
+    <li><a href="mailto:gordonferguson33@gmail.com">Contact</a></li>
     </a></li>
     </ul>
     ''';
