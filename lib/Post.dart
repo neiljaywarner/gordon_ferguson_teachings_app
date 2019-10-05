@@ -23,7 +23,12 @@ class Post {
   // eg is jetpack_featured_media_url good enough
   // or we could use smaller images for thumbnails...
   factory Post.fromJson(Map<String, dynamic> json) {
-    String content = json['content']['rendered'];
+    String oldBuilder = json['meta']['_et_pb_use_builder'];
+    String content = json['meta']['_et_pb_old_content'];
+    if (content == null || content.length == 0) {
+      content = json['content']['rendered'];
+    }
+
     content = content.replaceAll("<em>", "'");
     content = content.replaceAll("</em>", "'");
     content = content.replaceAll("<sup>", "");
