@@ -93,8 +93,7 @@ class ArticleFutureBuilder extends StatelessWidget {
   final Future<List<Post>> posts;
 
   @override
-  Widget build(BuildContext context) {
-    return FutureBuilder<List<Post>>(
+  Widget build(BuildContext context) => FutureBuilder<List<Post>>(
       future: posts,
       builder: (context, snapshot) {
         if (snapshot.connectionState != ConnectionState.done) {
@@ -119,7 +118,6 @@ class ArticleFutureBuilder extends StatelessWidget {
         }
       },
     );
-  }
 }
 
 class PostCard extends StatelessWidget {
@@ -129,8 +127,7 @@ class PostCard extends StatelessWidget {
   PostCard({Key key, this.post}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return InkWell(
+  Widget build(BuildContext context) => InkWell(
       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen(post: post))),
       child: Card(
         child: Column(
@@ -146,7 +143,6 @@ class PostCard extends StatelessWidget {
         ),
       ),
     );
-  }
 }
 
 class AboutPage extends StatelessWidget {
@@ -162,11 +158,8 @@ class AboutPage extends StatelessWidget {
     ''';
 
   @override
-  Widget build(BuildContext context) {
-
-    return Container(
+  Widget build(BuildContext context) => Container(
       padding: EdgeInsets.all(12),
       child: Html(data: resourcesHtml, onLinkTap: (String url) => launch(url, forceSafariVC: false),),
     );
-  }
 }
