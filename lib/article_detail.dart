@@ -50,7 +50,6 @@ class _DetailScreenState extends State<DetailScreen> {
                 IconButton(
                   icon: isFavorite ? Icon(Icons.star) : Icon(Icons.star_border),
                   onPressed: () => toggleFavorite(widget.post, isFavorite),
-                  // TODO: border star if already favorites
                 ),
               ]),
           body: SingleChildScrollView(
